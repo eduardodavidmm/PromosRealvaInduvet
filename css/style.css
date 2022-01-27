@@ -1,33 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* line 3, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 * {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
+/* line 11, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 ul {
   list-style: none; }
 
+/* line 15, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 a {
   text-decoration: none; }
 
+/* line 19, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 h2 {
-  font-weight: 500;
-  font-size: 36px;
+  font-weight: bold;
+  font-size: 40px;
   color: #000;
   margin-bottom: 60px; }
 
+/* line 26, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 h3 {
+  font-weight: bold;
   color: #000;
   font-size: 24px;
   margin-bottom: 20px; }
 
+/* line 33, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 h4 {
+  font-weight: bold;
   font-size: 20px;
   margin-bottom: 8px;
   color: #000; }
 
+/* Multiple section idgaf */
+/* line 42, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about,
+.services {
+  padding: 50px 20px; }
+  @media (min-width: 900px) {
+    /* line 42, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about,
+    .services {
+      padding: 100px 20px; } }
+
 /* Navigation Bar */
+/* line 52, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 header {
   height: 79px;
   position: fixed;
@@ -35,19 +56,24 @@ header {
   z-index: 3;
   background-color: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3); }
+  /* line 60, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   header nav {
     display: flex;
     align-items: center;
     padding: 25px 10px; }
+    /* line 65, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
     header nav img {
       height: 25px; }
+    /* line 69, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
     header nav ul {
       flex: 1;
       justify-content: flex-end;
       display: none; }
       @media (min-width: 800px) {
+        /* line 69, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
         header nav ul {
           display: flex; } }
+      /* line 77, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
       header nav ul a {
         color: #000;
         font-size: 14px;
@@ -55,85 +81,307 @@ header {
         padding: 0 15px;
         margin-left: 15px; }
 
+/* background */
+/* line 90, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1; }
+
+/* line 102, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s; }
+
+/* line 107, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.bg3 {
+  animation-duration: 5s; }
+
 /* Hero */
+/* line 113, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 .hero {
   padding: 150px 0;
-  background-image: url("/img/intro-bg.png") center bottom no-repeat;
-  background-size: cover;
+  background-color: #fff;
   display: flex;
   justify-content: center; }
+  /* line 119, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   .hero .flex-row {
     padding: 0 32px;
     gap: 32px;
     flex-direction: column;
     align-items: center; }
     @media (min-width: 1000px) {
+      /* line 119, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
       .hero .flex-row {
         flex-direction: row; } }
+  /* line 129, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   .hero h2 {
-    color: #fff;
+    color: #000;
+    font-weight: 800;
     font-size: 40px;
+    margin-bottom: 32px;
     text-align: center; }
     @media (min-width: 1000px) {
+      /* line 129, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
       .hero h2 {
         text-align: initial;
-        font-size: 40px; } }
+        font-size: 50px; } }
+  /* line 141, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   .hero .left {
     flex: 1;
     order: 2;
     justify-content: center;
     align-items: center; }
     @media (min-width: 1000px) {
+      /* line 141, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
       .hero .left {
         order: 1; } }
+  /* line 151, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   .hero .buttons {
     display: flex;
     flex-direction: column;
     align-items: center; }
     @media (min-width: 1000px) {
+      /* line 151, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
       .hero .buttons {
         flex-direction: row; } }
+    /* line 159, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
     .hero .buttons .btn {
       text-align: center;
       width: 200px;
       margin-bottom: 16px; }
       @media (min-width: 1000px) {
+        /* line 159, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
         .hero .buttons .btn {
           margin-right: 16px; } }
+  /* line 169, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   .hero img {
     display: flex;
     flex: 1;
     order: 1;
     width: 50%; }
     @media (min-width: 1000px) {
+      /* line 169, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
       .hero img {
         order: 2; } }
 
+/* Info Section */
+/* line 182, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about {
+  background-color: #fff; }
+  /* line 185, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about img {
+    width: 60%; }
+    @media (min-width: 900px) {
+      /* line 185, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+      .about img {
+        width: 100%; } }
+  /* line 192, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about h2 {
+    text-align: center; }
+  /* line 196, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about p {
+    line-height: 1.7; }
+  /* line 200, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about .flex-row {
+    gap: 50px;
+    flex-direction: column; }
+    @media (min-width: 900px) {
+      /* line 200, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+      .about .flex-row {
+        flex-direction: row; } }
+  /* line 208, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about .left,
+  .about .right {
+    flex: 1; }
+  /* line 214, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about .left .flex-row {
+    gap: 0;
+    flex-direction: column;
+    margin-top: 32px;
+    align-items: center; }
+    @media (min-width: 500px) {
+      /* line 214, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+      .about .left .flex-row {
+        flex-direction: row; } }
+  /* line 224, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about .left .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; }
+    @media (min-width: 500px) {
+      /* line 224, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+      .about .left .info {
+        margin-top: 0;
+        align-items: initial; } }
+    /* line 235, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about .left .info p {
+      color: #444;
+      font-size: 14px; }
+  /* line 241, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .about .left i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid green;
+    border-radius: 50%;
+    transition: 500ms ease all;
+    color: green;
+    font-size: 24px; }
+    @media (min-width: 500px) {
+      /* line 241, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+      .about .left i {
+        margin-right: 16px; } }
+    /* line 256, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about .left i:hover {
+      background-color: green;
+      border-color: transparent;
+      color: #fff; }
+
+/* line 266, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about-1 .left {
+  text-align: center; }
+  @media (min-width: 500px) {
+    /* line 266, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about-1 .left {
+      text-align: initial; } }
+
+/* line 276, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about-1 .right,
+.about-3 .right {
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 900px) {
+    /* line 276, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about-1 .right,
+    .about-3 .right {
+      align-items: start; } }
+
+/* line 286, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about-2 .left {
+  order: 2;
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 900px) {
+    /* line 286, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about-2 .left {
+      order: 1;
+      align-items: start; } }
+
+/* line 296, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about-2 .right {
+  order: 1; }
+  @media (min-width: 900px) {
+    /* line 296, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .about-2 .right {
+      order: 2; } }
+
+/* line 304, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.about-2,
+.about-3 {
+  margin-bottom: 20px; }
+
+/* line 310, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.services .container {
+  max-width: 900px; }
+
+/* line 314, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.services h2 {
+  text-align: center; }
+
+/* line 318, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.services .grid {
+  max-width: 600px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  row-gap: 50px; }
+  @media (min-width: 800px) {
+    /* line 318, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+    .services .grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 100%; } }
+
+/* line 330, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.services .flex-row {
+  cursor: pointer;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  background-color: #fff;
+  transition: 500ms ease all; }
+  /* line 340, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .services .flex-row:hover {
+    transform: translateY(-6px); }
+  /* line 344, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .services .flex-row h3 {
+    font-size: 18px; }
+  /* line 348, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .services .flex-row p {
+    font-size: 14px;
+    line-height: 1.7; }
+  /* line 353, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .services .flex-row i {
+    font-size: 64px;
+    position: absolute;
+    left: -10px;
+    display: flex;
+    align-self: center; }
+  /* line 361, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .services .flex-row .right {
+    margin-left: 40px; }
+
 /* Utility classes */
+/* line 369, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 .container {
   max-width: 1140px;
   margin: 0 auto; }
 
+/* line 374, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 .flex-row {
   display: flex; }
 
+/* line 378, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.grid {
+  display: grid; }
+
+/* line 382, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
 .btn {
   cursor: pointer;
   display: inline-block;
   padding: 14px 40px;
-  background-color: green;
-  color: white;
-  border-radius: 50px;
+  background-color: #0f480c;
+  color: #fff;
+  border-radius: 40px;
   border: 2px solid transparent;
   font-weight: 600;
   transition: 500ms ease all; }
-  .btn:hover {
-    background-color: transparent;
-    border-color: #fff; }
 
-.btn-light {
-  background-color: transparent;
-  border-color: #fff; }
-  .btn-light:hover {
-    background-color: green;
-    border-color: transparent; }
+/* line 394, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+.rainbow:hover {
+  background-image: linear-gradient(90deg, #3e851c 0%, #34982f 49%, #66c625 80%, #3e851c 100%);
+  animation: slidebg 7s linear infinite; }
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw; } }
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%); }
+  100% {
+    transform: translateX(25%); } }
+
+/*# sourceMappingURL=style.css.map */
