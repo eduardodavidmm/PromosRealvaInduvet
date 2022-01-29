@@ -13,6 +13,18 @@
 </head>
 <body>
 
+
+    <div class="modal-wrap display-none">
+        <div class="modal">
+            <img src="img/doggie.png" alt="">
+            <p>¡Ya estas participando!</p>
+            <p>Mantente al tanto en nuestras redes para saber si tu y tu mascota son los ganadores</p>
+            <button class="btn modal-close">Cerrar</button>
+        </div>
+    </div>
+
+
+
     <header>
         <nav class="container">
             <a href="">
@@ -191,5 +203,27 @@
         <div class="bg bg3"></div>
     </section>
 
+    <section class="contact-us">
+        <div class="container">
+            <h2>Registrate</h2>
+            <p>Ingresa los datos que se te solicitan para participar en el sorteo</p>
+
+            <form class="contact-form">
+                <div class="flex-row">
+                    <input type="search" class="full-name" placeholder="Nombre y Apellido">
+                    <input type="search" class="email-address" placeholder="Correo electrónico">
+                </div>
+                    <input type="number" class="phone" placeholder="Numero de Telefono">
+                    <input type="number" class="dni" placeholder="Numero de Identidad">
+                    <input type="search" class="pet-name" placeholder="Nombre de Tu Mascota">
+                    <input type="search" class="pet-breed" placeholder="Raza de Tu Mascota">
+                    <input type="number" class="age" placeholder="Edad">
+                    <input type="number" class="invoice" placeholder="Numero de Factura">
+                    <button class="btn submit-form" type="submit">Registrarse</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
