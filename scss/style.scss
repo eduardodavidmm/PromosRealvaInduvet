@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ a {
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 40px;
   color: #000;
   margin-bottom: 60px;
@@ -35,6 +35,36 @@ h4 {
   font-size: 20px;
   margin-bottom: 8px;
   color: #000;
+}
+
+/* Animation */
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+.slide-in {
+  animation: slide-in 500ms ease;
+}
+
+.slide-out {
+  animation: slide-out 500ms ease;
 }
 
 /* Multiple section idgaf */
@@ -68,6 +98,16 @@ header {
       height: 25px;
     }
 
+    i {
+      z-index: 6;
+      font-size: 24px;
+      flex: 1;
+      text-align: right;
+      @media (min-width: 800px) {
+        display: none !important;
+      }
+    }
+
     ul {
       flex: 1;
       justify-content: flex-end;
@@ -82,6 +122,9 @@ header {
         font-weight: 500;
         padding: 0 15px;
         margin-left: 15px;
+        &:hover {
+          color: #00aced;
+        }
       }
     }
   }
@@ -146,6 +189,44 @@ header {
   }
 }
 
+/*Mobile Navigation*/
+
+.mobile-bg {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  right: 0;
+
+  i {
+    position: absolute;
+    color: #fff;
+    left: 20px;
+    top: 20px;
+    font-size: 24px;
+  }
+
+  ul {
+    position: absolute;
+    padding: 20px;
+    width: 300px;
+    right: 0;
+    background-color: rgba(49, 196, 190, 0.99);
+    height: 100%;
+
+    a {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    li {
+      padding: 10px 0;
+      font-size: 15px;
+    }
+  }
+}
+
 /* Hero */
 
 .hero {
@@ -166,7 +247,7 @@ header {
 
   h2 {
     color: #000;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 40px;
     margin-bottom: 32px;
     text-align: center;
@@ -174,6 +255,14 @@ header {
       text-align: initial;
       font-size: 50px;
     }
+
+    u {
+      color: #25aae1;
+    }
+  }
+
+  .font200 {
+    font-weight: bolder;
   }
 
   .left {
@@ -192,15 +281,6 @@ header {
     align-items: center;
     @media (min-width: 1000px) {
       flex-direction: row;
-    }
-
-    .btn {
-      text-align: center;
-      width: 200px;
-      margin-bottom: 16px;
-      @media (min-width: 1000px) {
-        margin-right: 16px;
-      }
     }
   }
 
@@ -283,19 +363,26 @@ header {
       justify-content: center;
       width: 70px;
       height: 70px;
-      border: 2px solid green;
+      border: 2px solid #25aae1;
       border-radius: 50%;
       transition: 500ms ease all;
-      color: green;
+      color: #25aae1;
       font-size: 24px;
       @media (min-width: 500px) {
         margin-right: 16px;
       }
 
       &:hover {
-        background-color: green;
-        border-color: transparent;
         color: #fff;
+        border: none;
+        background-image: linear-gradient(
+          to right,
+          #25aae1,
+          #40e495,
+          #30dd8a,
+          #2bb673
+        );
+        box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
       }
     }
   }
@@ -376,18 +463,21 @@ header {
     overflow: hidden;
     background-color: #fff;
     transition: 500ms ease all;
+    text-align: justify;
 
     &:hover {
-      transform: translateY(-6px);
+      transform: translateY(-20px);
     }
 
     h3 {
       font-size: 18px;
+      font-weight: bolder;
       text-align: center;
     }
 
     p {
       font-size: 14px;
+      font-weight: bold;
       line-height: 1.7;
     }
   }
@@ -517,11 +607,6 @@ header {
       flex-direction: row;
       gap: 32px;
     }
-  }
-
-  .btn {
-    margin-top: 16px;
-    font-weight: 400;
   }
 }
 
@@ -685,15 +770,22 @@ header {
 }
 
 .btn {
-  cursor: pointer;
-  display: inline-block;
-  padding: 14px 40px;
-  background-color: #0f480c;
-  color: #fff;
-  border-radius: 40px;
-  border: 2px solid transparent;
+  width: 200px;
+  font-size: 16px;
   font-weight: 600;
-  transition: 500ms ease all;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .rainbow:hover {
@@ -720,4 +812,46 @@ header {
   100% {
     transform: translateX(25%);
   }
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
