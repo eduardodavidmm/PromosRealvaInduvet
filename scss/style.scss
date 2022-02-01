@@ -608,9 +608,14 @@ header {
       gap: 32px;
     }
   }
+
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-/**/
+/* footer */
 
 .site-footer {
   padding: 45px 0 20px;
@@ -747,6 +752,46 @@ header {
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+
+/* Terms and conditions */
+
+.termsand {
+  background-color: #fff;
+  padding: 70px;
+
+  h4 {
+    text-align: justify;
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .topterm {
+    margin-top: 60px;
+  }
+
+  .btn-hover {
+    width: 200px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 }
 

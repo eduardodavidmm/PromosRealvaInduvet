@@ -36,3 +36,24 @@ closeIcon.addEventListener("click" , () => {
     mobileNav.classList.toggle("slide-in");
     mobileNav.classList.toggle("slide-out");
 });
+
+
+//Send Email
+
+function sendEmail(params) {
+    var tempParams = {
+        from_name: document.getElementById("full-name").value,
+        full_name: document.getElementById("full-name").value,
+        emailaddress: document.getElementById("email-address").value,
+        phone: document.getElementById("phone").value,
+        dni: document.getElementById("dni").value,
+        pet_name: document.getElementById("pet-name").value,
+        pet_breed: document.getElementById("pet-breed").value,
+        age: document.getElementById("age").value,
+        invoice: document.getElementById("invoice").value,
+    };
+    
+    emailjs.send('service_coyy234','template_heqa6ek', tempParams).then(function(res) {
+        console.log("SEND", res.status);
+    })
+}
