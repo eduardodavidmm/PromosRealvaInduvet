@@ -228,7 +228,7 @@
             <h2>Llena el Formulario y Participa</h2>
             <p>Ingresa los datos que se te solicitan para participar en el sorteo</p>
 
-            <form class="contact-form">
+            <form class="contact-form" enctype="multipart/form-data">
                 <div class="flex-row">
                     <input type="search" id="full-name" class="full-name" placeholder="Nombre y Apellido">
                     <input type="search" id="email-address" class="email-address" placeholder="Correo electrónico">
@@ -238,7 +238,8 @@
                     <input type="search" id="pet-name" class="pet-name" placeholder="Nombre de Tu Mascota">
                     <input type="search" id="pet-breed" class="pet-breed" placeholder="Raza de Tu Mascota">
                     <input type="number" id="age" class="age" placeholder="Edad">
-                    <input type="number" id="invoice" class="invoice" placeholder="Numero de Factura">
+                    <input type="number" id="invoice" class="invoice" placeholder="Ingresa el número de tu Factura">
+                    <input type="file" id="invoiceimage" name="adjunto" accept=".pdf,.jpg,.png" multiple />
                     <label class="checkbox">Al dar click en el botón de registro acepta los terminos y condiciones del sorteo. </label>
                     <button class="btn-hover color-1 submit-form" onclick="sendEmail()" type="submit">Registrarse</button>
             </form>

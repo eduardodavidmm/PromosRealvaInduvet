@@ -51,6 +51,7 @@ function sendEmail(params) {
         pet_breed: document.getElementById("pet-breed").value,
         age: document.getElementById("age").value,
         invoice: document.getElementById("invoice").value,
+        invoiceimage: document.getElementById("invoiceimage").value,
     };
     
     emailjs.send('service_coyy234','template_heqa6ek', tempParams).then(function(res) {
