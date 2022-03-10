@@ -615,6 +615,57 @@ header {
   }
 }
 
+.contact-ustwo {
+  background-color: #fff;
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 26px;
+  }
+
+  input,
+  button {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0f480c;
+    border-radius: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    margin-bottom: 16px;
+  }
+
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    @media (min-width: 500px) {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* footer */
 
 .site-footer {
@@ -899,4 +950,11 @@ header {
     #2bb673
   );
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.imagecontainer {
+  img {
+    height: 600px;
+    width: auto;
+  }
 }
