@@ -879,4 +879,10 @@ header {
   height: 600px;
   width: auto; }
 
+@media (max-width: 500px) {
+  /* line 962, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .imagecontainer img {
+    height: 400px;
+    width: auto; } }
+
 /*# sourceMappingURL=style.css.map */

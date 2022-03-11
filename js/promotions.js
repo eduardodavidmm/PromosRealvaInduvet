@@ -42,19 +42,17 @@ closeIcon.addEventListener("click" , () => {
 
 function sendEmail(params) {
     var tempParams = {
-        from_name: document.getElementById("full-name").value,
-        full_name: document.getElementById("full-name").value,
-        emailaddress: document.getElementById("email-address").value,
-        phone: document.getElementById("phone").value,
-        dni: document.getElementById("dni").value,
-        pet_name: document.getElementById("pet-name").value,
-        pet_breed: document.getElementById("pet-breed").value,
-        age: document.getElementById("age").value,
-        invoice: document.getElementById("invoice").value,
-        invoiceimage: document.getElementById("invoiceimage").value,
+        from_namenew: document.getElementById("full-name").value,
+        full_namenew: document.getElementById("full-name").value,
+        emailaddressnew: document.getElementById("email-address").value,
+        phonenew: document.getElementById("phone").value,
+        dninew: document.getElementById("dni").value,
+        pet_namenew: document.getElementById("pet-name").value,
+        pet_breednew: document.getElementById("pet-breed").value,
+        agenew: document.getElementById("age").value,
     };
     
-    emailjs.send('service_coyy234','template_heqa6ek', tempParams).then(function(res) {
+    emailjs.send('service_do37ddm','template_yr6kjaw', tempParams).then(function(res) {
         console.log("SEND", res.status);
     })
 }

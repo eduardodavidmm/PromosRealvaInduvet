@@ -957,4 +957,11 @@ header {
     height: 600px;
     width: auto;
   }
+
+  @media (max-width: 500px) {
+    img {
+      height: 400px;
+      width: auto;
+    }
+  }
 }
