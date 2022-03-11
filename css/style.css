@@ -885,4 +885,9 @@ header {
     height: 400px;
     width: auto; } }
 
+@media (max-width: 900px) {
+  /* line 969, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
+  .promotitle {
+    margin-top: 80px; } }
+
 /*# sourceMappingURL=style.css.map */
