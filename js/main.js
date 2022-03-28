@@ -52,6 +52,7 @@ function sendEmail(params) {
         age: document.getElementById("age").value,
         invoice: document.getElementById("invoice").value,
         invoiceimage: document.getElementById("invoiceimage").value,
+        location: document.getElementById("location").value,
     };
     
     emailjs.send('service_coyy234','template_heqa6ek', tempParams).then(function(res) {
