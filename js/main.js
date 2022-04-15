@@ -50,7 +50,7 @@ function sendEmail(params) {
         pet_name: document.getElementById("pet-name").value,
         pet_breed: document.getElementById("pet-breed").value,
         age: document.getElementById("age").value,
-        invoice: document.getElementById("invoice").value,
+        invoice: document.getElementById("my_file").value,
         invoiceimage: document.getElementById("invoiceimage").value,
         location: document.getElementById("location").value,
     };
@@ -58,6 +58,9 @@ function sendEmail(params) {
     emailjs.send('service_coyy234','template_heqa6ek', tempParams).then(function(res) {
         console.log("SEND", res.status);
     })
+
+    emailjs.sendForm('service_coyy234','template_heqa6ek', this);
+    
 }
 
 
