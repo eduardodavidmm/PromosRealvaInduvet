@@ -14,6 +14,27 @@ close.addEventListener("click", () => {
     modal.classList.toggle("display-none");
 })
 
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 //mobile nav
 
 const openIcon = document.querySelector(".fa-bars");
@@ -50,36 +71,13 @@ function sendEmail(params) {
         pet_name: document.getElementById("pet-name").value,
         pet_breed: document.getElementById("pet-breed").value,
         age: document.getElementById("age").value,
-        invoice: document.getElementById("my_file").value,
-        invoiceimage: document.getElementById("invoiceimage").value,
+        invoice: document.getElementById("invoice").value,
+        invoiceimage: document.getElementById("my_file").value,
         location: document.getElementById("location").value,
     };
     
-    emailjs.send('service_coyy234','template_heqa6ek', tempParams).then(function(res) {
-        console.log("SEND", res.status);
-    })
-
-    emailjs.sendForm('service_coyy234','template_heqa6ek', this);
     
-}
-
-
-//Get the button:
-mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    emailjs.sendForm('service_coyy234','template_heqa6ek', '#myform', 'user_EUrxgffFoKJ6h3BMCbCAy').then(function(res) {
+    console.log("SEND", res.status);
+})
 }
