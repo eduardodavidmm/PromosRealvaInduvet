@@ -626,10 +626,6 @@ header {
     margin-bottom: 26px;
   }
 
-  input,
-  button {
-    display: block;
-  }
 
   input {
     width: 100%;
@@ -640,11 +636,16 @@ header {
     &:focus {
       outline: none;
     }
+
+    .button {
+      display: flex;
+    }
   }
 
-  input {
+  .input {
     margin-bottom: 16px;
   }
+
 
   form {
     max-width: 700px;
@@ -952,6 +953,51 @@ header {
   );
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
+
+
+.buttonform {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  height: 55px;
+  text-align: center;
+  border: none !important;
+  background-size: 300% 100%;
+  margin-top: 20px;
+
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.buttonform:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border: none;
+}
+
+.buttonform:focus {
+  outline: none;
+}
+
+.buttonform.color-1 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+
 
 .imagecontainer {
   img {

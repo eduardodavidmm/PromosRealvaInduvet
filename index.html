@@ -244,23 +244,44 @@
         <div class="container">
             <h2>Llena el Formulario y Participa</h2>
             <p>Ingresa los datos que se te solicitan para participar en el sorteo</p>
-
-            <form id="myform" class="contact-form" enctype="multipart/form-data">
+            <!--
+            <form id="form" class="contact-form" enctype="multipart/form-data">
                 <div class="flex-row">
-                    <input type="search" id="full-name" class="full-name" placeholder="Nombre y Apellido">
-                    <input type="search" id="email-address" class="email-address" placeholder="Correo electrónico">
+                    <input type="field" id="from_name" name="from-name" placeholder="Nombre y Apellido">
+                    <input type="text" id="emailaddress" name="email-address" placeholder="Correo electrónico">
                 </div>
-                    <input type="number" id="phone" class="phone" placeholder="Numero de Telefono">
-                    <input type="number" id="dni" class="dni" placeholder="Numero de Identidad">
-                    <input type="search" id="pet-name" class="pet-name" placeholder="Nombre de Tu Mascota">
-                    <input type="search" id="pet-breed" class="pet-breed" placeholder="Raza de Tu Mascota">
-                    <input type="text" id="age" class="age" placeholder="Edad">
-                    <input type="number" id="invoice" class="invoice" placeholder="Ingresa el número de tu Factura (Ej. 45000)">
+                    <input type="number" id="phone" name="phone" placeholder="Numero de Telefono">
+                    <input type="number" id="dni" name="dni" placeholder="Numero de Identidad">
+                    <input type="text" id="pet_name" name="pet_name" placeholder="Nombre de Tu Mascota">
+                    <input type="text" id="pet_breed" name="pet_breed" placeholder="Raza de Tu Mascota">
+                    <input type="text" id="age" name="age" placeholder="Edad">
+                    <input type="number" id="invoice" name="invoice" placeholder="Ingresa el número de tu Factura (Ej. 45000)">
                     <input type="file" id="my_file" name="my_file" accept=".pdf,.jpg,.png" multiple />
-                    <input type="text" id="location" class="location" placeholder="Sucursal o Establecimiento (Ej. Super Mascota Stock)">
+                    <input type="text" id="location" name="location" placeholder="Sucursal o Establecimiento (Ej. Super Mascota Stock)">
                     <label class="checkbox">Al dar click en el botón de registro acepta los terminos y condiciones del sorteo. </label>
-                    <button class="btn-hover color-1 submit-form" onclick="sendEmail()" type="submit">Registrarse</button>
+                    <button class="btn-hover color-1 submit-form" id="button" type="submit">Registrarse</button>
             </form>
+        -->
+            <form id="form" class="contact-form">
+                <div class="flex-row">
+                  <input class="input" type="text" name="from_name" id="from_name" placeholder="Nombre y Apellido" required>
+                  <input class="input" type="text" name="emailaddress" id="emailaddress" placeholder="Correo electrónico">
+                </div>
+                  <input class="input" type="text" name="phone" id="phone" placeholder="Numero de Teléfono">
+                  <input class="input" type="text" name="dni" id="dni" placeholder="Numero de Identidad / DNI">
+                  <input class="input" type="text" name="pet_name" id="pet_name" placeholder="Nombre de Tu Mascota">
+                  <input class="input" type="text" name="pet_breed" id="pet_breed"  placeholder="Raza de Tu Mascota">
+                  <input class="input" type="text" name="age" id="age" placeholder="Edad">
+                  <input class="input" type="text" name="invoice" id="invoice" placeholder="Ingresa el número de tu Factura (Ej. 45000)">
+                  <div class="flex-row">
+                    <label class="checkbox">Adjunta imagen de tu factura:</label>
+                    <input class="input" type="file" name="my_file" id="my_file" required>
+                  </div>
+                  <input class="input" type="text" name="location" id="location" placeholder="Sucursal o Establecimiento (Ej. Super Mascota Stock)">
+                  <label class="checkbox">Al dar click en el botón de registro acepta los terminos y condiciones del sorteo. </label>
+                  <input class="buttonform color-1 button" type="submit" id="button" value="Registrarse" >
+            </form>
+              
         </div>
     </section>
 
@@ -306,12 +327,41 @@
 
   <button onclick="topFunction()" id="myBtn" title="Ir al Inicio"><i class="fa-solid fa-circle-up"></i></button>
 
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script type="text/javascript">
-    (function() {
-    emailjs.init("user_EUrxgffFoKJ6h3BMCbCAy");
-    })();
+    emailjs.init('Z7ETfQzsDxRAJKN2f')
+    </script>
+    <script>
+        const btn = document.getElementById('button');
+        const contactForm = document.querySelector(".contact-form");
+        const submit = document.querySelector(".submit-form");
+        const modal = document.querySelector(".modal-wrap");
+        const close = document.querySelector(".modal-close");
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Registrando...';
+
+        const serviceID = 'promosrealvainduvet';
+        const templateID = 'template_oe07u0d';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+            btn.value = 'Registrarse';
+            contactForm.reset();
+            modal.classList.toggle("display-none");
+            close.addEventListener("click", () => {
+            modal.classList.toggle("display-none");
+            })
+            }, (err) => {
+            btn.value = 'Registrarse';
+            alert(JSON.stringify(err));
+            });
+        });
     </script>
 </body>
 </html>

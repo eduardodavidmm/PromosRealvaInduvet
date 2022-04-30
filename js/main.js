@@ -1,10 +1,11 @@
+function modal() {
+
 const contactForm = document.querySelector(".contact-form");
 const submit = document.querySelector(".submit-form");
 const modal = document.querySelector(".modal-wrap");
 const close = document.querySelector(".modal-close");
 
 submit.addEventListener("click", (e) => {
-    e.preventDefault();
         contactForm.reset();
         modal.classList.toggle("display-none");
     }
@@ -13,6 +14,7 @@ submit.addEventListener("click", (e) => {
 close.addEventListener("click", () => {
     modal.classList.toggle("display-none");
 })
+}
 
 
 //Get the button:
@@ -58,13 +60,11 @@ closeIcon.addEventListener("click" , () => {
     mobileNav.classList.toggle("slide-out");
 });
 
-
+/*
 //Send Email
-
 function sendEmail(params) {
     var tempParams = {
-        from_name: document.getElementById("full-name").value,
-        full_name: document.getElementById("full-name").value,
+        from_name: document.getElementById("from_name").value,
         emailaddress: document.getElementById("email-address").value,
         phone: document.getElementById("phone").value,
         dni: document.getElementById("dni").value,
@@ -77,7 +77,7 @@ function sendEmail(params) {
     };
     
     
-    emailjs.sendForm('service_coyy234','template_heqa6ek', '#myform', 'user_EUrxgffFoKJ6h3BMCbCAy').then(function(res) {
+    emailjs.sendForm('promosrealvainduvet','template_oe07u0d', '#myForm', 'Z7ETfQzsDxRAJKN2f').then(function(res) {
     console.log("SEND", res.status);
 })
-}
+}*/
