@@ -423,7 +423,7 @@ header {
   overflow: hidden;
   background-color: #fff;
   transition: 500ms ease all;
-  text-align: justify; }
+  text-align: center; }
   /* line 467, ../../GitHub/PromosRealvaInduvet/scss/style.scss */
   .services .flex-row:hover {
     transform: translateY(-20px); }
